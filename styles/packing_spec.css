@@ -1,0 +1,109 @@
+/* 📦 포장 사양 등록 페이지 스타일 */
+body {
+  font-family: 'Noto Sans KR', sans-serif;
+  background-color: #f5f6f7;
+  margin: 0;
+  padding: 0;
+}
+
+.title-bar {
+  background-color: #007BFF;
+  color: white;
+  font-size: 24px;
+  text-align: center;
+  padding: 15px;
+  font-weight: bold;
+}
+
+.container {
+  display: flex;
+  height: 100vh;
+}
+
+/* 좌측 패널 */
+.left-panel {
+  width: 30%;
+  padding: 20px;
+}
+
+/* 질문 카드 */
+.card {
+  background-color: white;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  padding: 20px;
+  margin-bottom: 20px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+/* 입력창 */
+input {
+  width: 80%;
+  padding: 8px;
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-sizing: border-box;
+}
+
+/* 버튼 */
+button {
+  padding: 10px;
+  background-color: #007BFF;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  width: 100%;
+}
+
+button:hover {
+  background-color: #0056b3;
+}
+
+/* 검색 결과 */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  text-align: center;
+}
+
+th {
+  background-color: #007BFF;
+  color: white;
+  padding: 10px;
+}
+
+td {
+  padding: 10px;
+  border: 1px solid #ccc;
+  cursor: pointer;
+}
+
+td:hover {
+  background-color: #d0e3ff;
+}
+
+/* 우측 패널 */
+.right-panel {
+  width: 70%;
+  padding: 20px;
+}
+
+.result-display {
+  background-color: white;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  padding: 20px;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.2);
+}
+
+h3 {
+  color: #007BFF;
+}
+
+/* 다음 버튼 */
+#nextBtn {
+  margin-top: 15px;
+  background-color: green;
+}

@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BOM 관리</title>
+    <link rel="stylesheet" href="../../styles/bom.css">
+    <script defer src="../../scripts/bom_register.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.17.3/xlsx.full.min.js"></script>
+</head>
+<body>
+
+    <!-- 🔹 상단 타이틀 -->
+    <header class="dashboard-header">
+        <h1>📦 BOM 관리</h1>
+        <div class="dropdown">
+            <button class="dropbtn" onclick="toggleDropdown()">🔗 바로가기 ▼</button>
+            <div class="dropdown-content" id="quickLinks">
+                <a href="bom_register.html">🛠 BOM 등록</a>
+                <a href="bom_list.html">📋 BOM 리스트</a>
+                <a href="bom_analysis.html">📊 BOM 분석</a>
+                <a href="bom_export.html">📤 BOM 내보내기</a>
+            </div>
+        </div>
+    </header>
+
+    <div class="bom-container">
+        <!-- 🔹 BOM 등록 카드 -->
+        <div class="bom-form-container">
+            <h2>🛠 BOM 등록</h2>
+
+            <!-- 🔹 제품 등록 폼 -->
+            <div id="productRegistration">
+                <p class="step-indicator">🔺 1. 제품 등록을 먼저 진행하세요.</p>
+
+                <label for="productName">📦 제품명</label>
+                <input type="text" id="productName" placeholder="예: 제품 A" required>
+
+                <label for="productNumber">📑 제품 번호</label>
+                <input type="text" id="productNumber" placeholder="예: PN-10001" required>
+
+                <button id="registerProduct">✅ 제품 등록</button>
+            </div>
+
+            <!-- 🔹 하위 항목 등록 폼 -->
+            <div id="subItemRegistration" class="hidden">
+                <p class="step-indicator">🔺 2. 하위 항목을 등록하세요.</p>
+
+                <label for="parentItem">📂 부모 항목 선택</label>
+                <select id="parentItem"></select>
+
+                <label for="itemType">📦 항목 유형</label>
+                <select id="itemType">
+                    <option value="부품">부품</option>
+                    <option value="원자재">원자재</option>
+                </select>
+
+                <label for="partNumber">🔢 자재번호</label>
+                <input type="text" id="partNumber" placeholder="예: PN-12345" required>
+
+                <label for="itemName">🔧 항목명</label>
+                <input type="text" id="itemName" placeholder="예: PCB Board" required>
+
+                <label for="quantity">📊 수량</label>
+                <input type="number" id="quantity" placeholder="예: 5" required>
+
+                <label for="unit">⚖️ 단위</label>
+                <select id="unit">
+                    <option value="PCS">PCS</option>
+                    <option value="KG">KG</option>
+                    <option value="M">M</option>
+                </select>
+
+                <label for="manufacturer">🏭 제조사</label>
+                <input type="text" id="manufacturer" placeholder="예: Samsung">
+
+                <label for="remarks">📝 비고</label>
+                <textarea id="remarks" placeholder="추가 사항 입력"></textarea>
+
+                <button id="addBOM">✅ BOM 추가</button>
+            </div>
+        </div>
+
+        <!-- 🔹 등록된 BOM 리스트 -->
+        <div class="bom-table-container">
+            <h2>📌 등록된 BOM 리스트</h2>
+            <div id="bomTreeView"></div>
+
+            <!-- 🔹 양식 다운로드 및 파일 업로드 -->
+            <div class="bom-actions">
+                <button onclick="downloadTemplate()">📥 양식 다운로드</button>
+                <input type="file" id="excelFileInput" accept=".xlsx, .csv">
+                <button onclick="uploadExcel()">📤 업로드</button>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>

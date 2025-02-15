@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>모델별 공정 순서 등록</title>
+    <link rel="stylesheet" href="../../styles/mfg.css">
+    <link rel="stylesheet" href="../../styles/model_order.css">
+    <script defer src="../../scripts/model_order_new.js"></script>
+</head>
+<body>
+
+  <header class="dashboard-header">
+    <h1>📌 생산기술 > 모델별 공정 순서 등록</h1>
+    <div class="dropdown">
+        <button class="dropbtn">🔗 바로가기 ▼</button>
+        <div class="dropdown-content">
+            <a href="index.html">🏠 대시보드</a>
+            <a href="process_registration.html">🛠 공정 등록</a>
+            <a href="model_order.html">📋 모델별 공정 순서</a>
+            <a href="bom_management.html">📦 BOM 관리</a>
+            <a href="packaging_management.html">📦 포장 관리</a>
+        </div>
+    </div>
+  </header>
+
+  <section class="model-form">
+    <h2>⚙ 모델 정보 등록</h2>
+    <div class="model-form-row">
+        <label>모델 코드:</label>
+        <input type="text" id="modelCode" placeholder="모델 코드 입력">
+        <span id="modelStatusLabel">⏳ 대기 중</span>
+
+        <label>모델명:</label>
+        <input type="text" id="modelName" placeholder="모델명 입력">
+        
+        <label>플랫폼:</label>
+        <input type="text" id="platform" placeholder="플랫폼 입력">
+
+        <button id="modelSaveBtn" disabled>💾 모델 저장</button>
+    </div>
+  </section>
+
+  <section class="process-selection">
+    <h2>⚙ 공정 갯수 선택</h2>
+    <div class="process-selection-container">
+        <div class="process-category">
+            <label>준비공정</label>
+            <select id="prepProcess" multiple></select>
+        </div>
+        <div class="process-category">
+            <label>조립공정</label>
+            <select id="assemblyProcess" multiple></select>
+        </div>
+        <div class="process-category">
+            <label>검사공정</label>
+            <select id="inspectionProcess" multiple></select>
+        </div>
+        <div class="process-category">
+            <label>포장공정</label>
+            <select id="packagingProcess" multiple></select>
+        </div>
+        <button id="processInputBtn" disabled>⚙ 공정 입력</button>
+    </div>
+  </section>
+
+  <section class="process-order">
+    <h2>🔗 공정 순서 지정</h2>
+    <div id="processOrderList"></div>
+    <button id="saveProcess">💾 저장</button>
+  </section>
+
+</body>
+</html>

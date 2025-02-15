@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>자재 사용 공정 관리</title>
+    <link rel="stylesheet" href="../../styles/bom.css">
+    <script defer src="../../scripts/bom.js"></script>
+</head>
+<body>
+
+<header class="dashboard-header">
+    <h1>🏭 자재 사용 공정 관리</h1>
+</header>
+
+<main class="dashboard-container">
+    <div class="bom-card">
+        <h2>🛠 공정별 자재 사용량 입력</h2>
+        <form id="processUsageForm" class="bom-form">
+            <label for="processName">🏭 공정명</label>
+            <input type="text" id="processName" placeholder="예: SMT 조립" required>
+
+            <label for="materialName">📦 사용 원자재</label>
+            <input type="text" id="materialName" placeholder="예: 납땜 페이스트" required>
+
+            <label for="usageAmount">🔢 사용량</label>
+            <input type="number" id="usageAmount" placeholder="예: 10g" required>
+
+            <button type="submit">✅ 저장</button>
+        </form>
+    </div>
+</main>
+
+</body>
+</html>

@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>생산기술 대시보드</title>
+    <link rel="stylesheet" href="../../styles/mfg.css">
+    <script defer src="../../scripts/mfg.js"></script>
+</head>
+<body>
+
+<header class="dashboard-header">
+    <h1>⚙️ 생산기술 대시보드</h1>
+    <div class="view-toggle">
+        <button id="tileView" class="active">📌 타일</button>
+        <button id="listView">📋 리스트</button>
+    </div>
+</header>
+
+<main class="dashboard-container">
+    <section id="tileContainer" class="tile-view">
+        <div class="dashboard-card" onclick="navigateTo('process_registration.html')">
+            <h2>🛠 공정 등록</h2>
+            <p>생산 공정을 등록하고 관리합니다.</p>
+        </div>
+        <div class="dashboard-card" onclick="navigateTo('model_order.html')">
+            <h2>📋 모델별 공정 순서</h2>
+            <p>각 모델에 적용할 공정 순서를 지정합니다.</p>
+        </div>
+        <div class="dashboard-card" onclick="navigateTo('../bom/bom_management.html')">
+            <h2>📦 BOM 관리</h2>
+            <p>제품 구성 BOM을 관리합니다.</p>
+        </div>
+        <div class="dashboard-card" onclick="navigateTo('packaging_management.html')">
+            <h2>📦 포장 관리</h2>
+            <p>포장 기준 및 출고 관련 사항을 설정합니다.</p>
+        </div>
+        <div class="dashboard-card" onclick="navigateTo('ecn_approval.html')">
+            <h2>📄 ECN 승인</h2>
+            <p>ECN(설계 변경) 요청 및 승인을 관리합니다.</p>
+        </div>
+        <div class="dashboard-card" onclick="navigateTo('manufacturing_environment.html')">
+            <h2>🏭 제조 환경 관리</h2>
+            <p>제조 공정 환경 설정을 관리합니다.</p>
+        </div>
+        <div class="dashboard-card" onclick="navigateTo('facility_registration.html')">
+            <h2>🛠 설비 등록</h2>
+            <p>생산 설비 및 관리 정보를 등록합니다.</p>
+        </div>
+        <div class="dashboard-card" onclick="navigateTo('facility_maintenance.html')">
+            <h2>🔧 설비 유지보수</h2>
+            <p>설비 점검 일정 및 유지보수를 관리합니다.</p>
+        </div>
+        <div class="dashboard-card" onclick="navigateTo('process_improvement.html')">
+            <h2>📈 공정 개선 관리</h2>
+            <p>공정 개선 사항을 검토하고 적용합니다.</p>
+        </div>
+    </section>
+
+        <!-- 🔹 리스트 보기 -->
+    <section id="listContainer" class="hidden">
+        <table class="process-table">
+            <thead>
+                <tr>
+                    <th>기능명</th>
+                    <th>설명</th>
+                    <th>바로가기</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>🛠 공정 등록</td>
+                    <td>생산 공정을 등록하고 관리합니다.</td>
+                    <td><button onclick="navigateTo('process_registration.html')">이동</button></td>
+                </tr>
+                <tr>
+                    <td>📋 모델별 공정 순서</td>
+                    <td>각 모델에 적용할 공정 순서를 지정합니다.</td>
+                    <td><button onclick="navigateTo('model_order.html')">이동</button></td>
+                </tr>
+                <tr>
+                    <td>📦 BOM 관리</td>
+                    <td>제품 구성 BOM을 관리합니다.</td>
+                    <td><button onclick="navigateTo('bom_management.html')">이동</button></td>
+                </tr>
+                <tr>
+                    <td>📦 포장 관리</td>
+                    <td>포장 기준 및 출고 관련 사항을 설정합니다.</td>
+                    <td><button onclick="navigateTo('packaging_management.html')">이동</button></td>
+                </tr>
+                <tr>
+                    <td>📄 ECN 승인</td>
+                    <td>ECN(설계 변경) 요청 및 승인을 관리합니다.</td>
+                    <td><button onclick="navigateTo('ecn_approval.html')">이동</button></td>
+                </tr>
+                <tr>
+                    <td>🏭 제조 환경 관리</td>
+                    <td>제조 공정 환경 설정을 관리합니다.</td>
+                    <td><button onclick="navigateTo('manufacturing_environment.html')">이동</button></td>
+                </tr>
+                <tr>
+                    <td>🛠 설비 등록</td>
+                    <td>생산 설비 및 관리 정보를 등록합니다.</td>
+                    <td><button onclick="navigateTo('facility_registration.html')">이동</button></td>
+                </tr>
+                <tr>
+                    <td>🔧 설비 유지보수</td>
+                    <td>설비 점검 일정 및 유지보수를 관리합니다.</td>
+                    <td><button onclick="navigateTo('facility_maintenance.html')">이동</button></td>
+                </tr>
+                <tr>
+                    <td>📈 공정 개선 관리</td>
+                    <td>공정 개선 사항을 검토하고 적용합니다.</td>
+                    <td><button onclick="navigateTo('process_improvement.html')">이동</button></td>
+                </tr>
+            </tbody>
+        </table>
+    </section>
+
+</main>
+
+</body>
+</html>

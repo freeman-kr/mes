@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>공정-부품 매핑</title>
+    <link rel="stylesheet" href="../../styles/bom_process_register.css">
+    <script defer src="../../scripts/bom_process_register.js"></script>
+</head>
+<body>
+
+    <!-- 🔹 타이틀바 -->
+    <header class="dashboard-header">
+        <h1>📌 공정-부품 매핑</h1>
+        <div class="dropdown">
+            <button class="dropbtn" onclick="toggleDropdown()">🔗 바로가기 ▼</button>
+            <div class="dropdown-content" id="quickLinks">
+                <a href="bom_register.html">🛠 BOM 등록</a>
+                <a href="bom_list.html">📋 BOM 리스트</a>
+                <a href="bom_process_usage.html">🏭 자재 사용 공정 관리</a>
+            </div>
+        </div>
+    </header>
+
+    <!-- 🔹 공정-부품 매핑 테이블 -->
+    <main class="bom-container">
+        <section class="bom-process-table">
+            <h2>📌 공정-부품 매핑</h2>
+            <table id="bomProcessTable">
+                <thead>
+                    <tr>
+                        <th>LEVEL</th>
+                        <th>부품명</th>
+                        <th>자재번호</th>
+                        <th>수량</th>
+                        <th>준비1</th>
+                        <th>준비2</th>
+                        <th>조립1</th>
+                        <th>조립2</th>
+                        <th>성능검사</th>
+                        <th>자동검사1</th>
+                        <th>자동검사2</th>
+                        <th>비전검사</th>
+                        <th>포장준비</th>
+                        <th>포장</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <!-- 데이터 동적 추가 -->
+                </tbody>
+            </table>
+            <button id="registerProcess">✅ 공정-부품 등록</button>
+        </section>
+    </main>
+
+</body>
+</html>

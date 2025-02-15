@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>공정 등록</title>
+    <link rel="stylesheet" href="../../styles/mfg.css">
+    <script defer src="../../scripts/mfg.js"></script>
+</head>
+<body>
+
+    <!-- 공정 등록 페이지 헤더 -->
+    <header class="dashboard-header">
+        <h1>📌 생산기술 > 공정 등록</h1>
+        <div class="dropdown">
+            <button class="dropbtn">🔗 바로가기 ▼</button>
+            <div class="dropdown-content">
+                <a href="index.html">🏠 대시보드</a>
+                <a href="process_registration.html">🛠 공정 등록</a>
+                <a href="model_order.html">📋 모델별 공정 순서</a>
+                <a href="bom_management.html">📦 BOM 관리</a>
+                <a href="packaging_management.html">📦 포장 관리</a>
+                <a href="ecn_approval.html">📄 ECN 승인</a>
+                <a href="manufacturing_environment.html">🏭 제조 환경 관리</a>
+                <a href="facility_registration.html">🛠 설비 등록</a>
+                <a href="facility_maintenance.html">🔧 설비 유지보수</a>
+                <a href="process_improvement.html">📈 공정 개선 관리</a>
+            </div>
+        </div>
+    </header>
+
+    <!-- 신규 공정 등록 -->
+    <div class="process-card">
+        <h2>🛠 신규 공정 등록</h2>
+        <form id="processForm" class="process-form">
+            <label for="processName">📌 공정명</label>
+            <input type="text" id="processName" placeholder="예: 조립1, 검사1" required>
+
+            <label for="processType">⚙️ 공정 유형</label>
+            <select id="processType">
+                <option value="조립">조립</option>
+                <option value="검사">검사</option>
+                <option value="포장">포장</option>
+            </select>
+
+            <label for="processDesc">📄 공정 설명</label>
+            <textarea id="processDesc" placeholder="공정에 대한 설명을 입력하세요."></textarea>
+
+            <button type="submit">✅ 공정 등록</button>
+        </form>
+    </div>
+
+    <!-- 기존 공정 리스트 -->
+    <div class="process-card">
+        <h2>📌 기존 공정 리스트</h2>
+        <table class="process-table">
+            <thead>
+                <tr>
+                    <th>공정명</th>
+                    <th>코드</th>
+                    <th>유형</th>
+                    <th>모델명</th>
+                    <th>관리</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>조립 1</td>
+                    <td>ABC123</td>
+                    <td>조립</td>
+                    <td>모델 A</td>
+                    <td>
+                        <button class="edit-btn">✏️ 수정</button>
+                        <button class="delete-btn">🗑 삭제</button>
+                    </td>
+                </tr>
+                <tr>
+                    <td>검사 2</td>
+                    <td>XYZ456</td>
+                    <td>검사</td>
+                    <td>모델 B</td>
+                    <td>
+                        <button class="edit-btn">✏️ 수정</button>
+                        <button class="delete-btn">🗑 삭제</button>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+</body>
+</html>

@@ -1,0 +1,263 @@
+/* 📌 모델 등록 폼 */
+.model-form {
+  background: white;
+  padding: 15px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  margin-bottom: 20px;
+}
+
+/* ✅ (2025-02-11 16:30) 모델 저장 & 공정 입력 버튼 동일 스타일 */
+.model-form button, #processInputBtn {
+  padding: 10px 15px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.model-form button:hover, #processInputBtn:hover {
+  background-color: #0056b3;
+}
+
+.model-form-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  align-items: center;
+}
+
+.model-form input {
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  width: 200px;
+}
+
+#modelStatusLabel {
+  font-size: 14px;
+  font-weight: bold;
+  margin-left: 10px;
+}
+
+/* 📌 공정 선택 폼 */
+.process-selection-container {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  background: white;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+/* ✅ (2025-02-11 16:35) 공정 선택 항목 */
+.process-category {
+  text-align: center;
+  flex: 1;
+  min-width: 150px;
+}
+
+.process-category label {
+  font-weight: bold;
+  display: block;
+  margin-bottom: 5px;
+}
+
+/* ✅ (2025-02-11 16:40) 공정 선택 드롭다운 스타일 */
+.process-selection select {
+  width: 16vw;
+  height: 130px;
+  min-width: 100px;
+  max-width: 180px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  padding: 5px;
+}
+
+/* 📌 공정 입력 버튼 */
+#processInputBtn {
+  height: 140px;
+  width: 110px;
+  background: #ccc;
+  color: white;
+  border-radius: 15px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 16px;
+  border: none;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+#processInputBtn.active-button {
+  background: #007bff;
+}
+
+#processInputBtn:hover {
+  background-color: #0056b3;
+}
+
+/* 📌 공정 리스트 & 배치된 공정 */
+.process-order {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  padding: 15px;
+  justify-content: center;
+  align-items: center;
+}
+
+
+.process-order #processOrderList {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  justify-content: center;
+  border: 2px dashed #007bff; /* ✅ 드래그 시 드롭 가능 영역 강조 */
+  padding: 15px;
+  border-radius: 10px;
+}
+
+/* ✅ (2025-02-11 16:45) 드래그 가능한 공정 카드 */
+.process-item {
+  width: 120px;
+  height: 100px;
+  background-color: white;
+  border: 2px solid #007bff;
+  border-radius: 30px;
+  text-align: center;
+  font-weight: bold;
+  cursor: grab;
+  position: relative;
+  transition: all 0.3s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.process-item:active {
+  transform: scale(1.05);
+}
+
+/* 📌 드래그 시 강조 */
+.process-item.dragging {
+  opacity: 0.5;
+  transform: scale(1.1);
+}
+
+.process-number {
+  font-size: 14px;
+  font-weight: bold;
+  color: white;
+  background-color: #007bff;
+  border-radius: 50%;
+  padding: 5px;
+  position: absolute;
+  top: 5px;
+  left: 5px;
+}
+
+/* 📌 바로가기 드롭다운 */
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropbtn {
+  background-color: white;
+  color: #007bff;
+  padding: 10px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: white;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+  min-width: 150px;
+  right: 0;
+  z-index: 1000;
+}
+
+.dropdown-content a {
+  color: black;
+  padding: 10px;
+  text-decoration: none;
+  display: block;
+}
+
+.dropdown-content a:hover {
+  background-color: #f1f1f1;
+}
+
+.show {
+  display: block;
+}
+
+/* 📌 공정 입력 버튼 스타일 */
+.active-button {
+  padding: 10px 15px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.active-button:hover {
+  background-color: #0056b3;
+}
+
+/* ✅ (2025-02-11 17:00) 드래그 중 점선 삽입 위치 */
+.process-placeholder {
+  width: 120px;
+  height: 100px;
+  background-color: #e0e0e0;
+  border: 2px dashed #007bff;
+  border-radius: 30px;
+  text-align: center;
+  font-weight: bold;
+  color: #007bff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* ✅ (2025-02-11 17:05) 공정 제거 버튼 */
+.remove-process {
+  position: absolute;
+  top: 5px;
+  right: 5px;
+  background: red;
+  color: white;
+  border: none;
+  border-radius: 50%;
+  cursor: pointer;
+  width: 20px;
+  height: 20px;
+}
+
+/* ✅ (2025-02-11) 화살표 애니메이션 */
+.process-arrow {
+  font-size: 24px;
+  color: #007bff;
+  animation: fadeIn 0.3s ease-in-out;
+}
+
+@keyframes fadeIn {
+  from {
+      opacity: 0;
+      transform: scale(0.8);
+  }
+  to {
+      opacity: 1;
+      transform: scale(1);
+  }
+}

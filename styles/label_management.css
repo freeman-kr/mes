@@ -1,0 +1,44 @@
+.label-form {
+  background: white;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  width: 50%;
+  margin: 20px auto;
+  text-align: left;
+}
+
+.label-form label {
+  display: block;
+  margin-bottom: 10px;
+}
+
+.label-form input {
+  width: 100%;
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.label-form button {
+  background-color: #007bff;
+  color: white;
+  border: none;
+  padding: 10px;
+  cursor: pointer;
+  border-radius: 5px;
+  width: 100%;
+}
+
+.label-form button:hover {
+  background-color: #0056b3;
+}
+
+/* 버튼 스타일 */
+.print-btn {
+  background-color: #28a745;
+}
+
+.delete-btn {
+  background-color: #dc3545;
+}

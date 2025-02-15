@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>사용자 관리</title>
+    <link href="../../styles/input.css" rel="stylesheet">
+</head>
+<body class="bg-gray-100 p-6">
+    <div class="max-w-6xl mx-auto bg-white p-6 shadow-md rounded-lg">
+        <h2 class="text-2xl font-bold text-gray-800 mb-4">⚙ 사용자 관리</h2>
+
+        <!-- 검색 창 -->
+        <div class="mb-4">
+            <input type="text" id="searchInput" placeholder="🔍 사용자 검색..." class="border p-2 rounded">
+            <button onclick="searchUser()" class="bg-blue-500 text-white px-3 py-2 rounded">검색</button>
+        </div>
+
+        <!-- 사용자 목록 테이블 -->
+        <table class="w-full border border-gray-300">
+            <thead>
+                <tr class="bg-blue-600 text-white">
+                    <th class="border px-4 py-2">사용자 ID</th>
+                    <th class="border px-4 py-2">이름</th>
+                    <th class="border px-4 py-2">역할</th>
+                    <th class="border px-4 py-2">상태</th>
+                    <th class="border px-4 py-2">관리</th>
+                </tr>
+            </thead>
+            <tbody id="userTable">
+                <!-- 사용자 목록이 여기에 추가됨 -->
+            </tbody>
+        </table>
+    </div>
+
+    <script src="../../scripts/user_management.js"></script>
+</body>
+</html>

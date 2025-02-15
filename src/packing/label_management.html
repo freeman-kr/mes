@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>라벨 인쇄 관리</title>
+    <link rel="stylesheet" href="../../styles/mfg.css">
+    <link rel="stylesheet" href="../../styles/label_management.css">
+    <script defer src="../../scripts/label_management.js"></script>
+</head>
+<body>
+
+<header class="dashboard-header">
+    <h1>🏷️ 라벨 인쇄 관리</h1>
+</header>
+
+<main class="dashboard-container">
+    <section class="label-form">
+        <h2>📋 라벨 인쇄 사양 등록</h2>
+        <label>자재번호:
+            <input type="text" id="materialNumber" placeholder="자재번호 입력">
+        </label>
+        <label>제품명:
+            <input type="text" id="productName" placeholder="제품명 입력">
+        </label>
+        <label>출하 국가:
+            <input type="text" id="country" placeholder="출하 국가 입력">
+        </label>
+        <label>라벨 템플릿:
+            <input type="text" id="labelTemplate" placeholder="라벨 파일명 입력">
+        </label>
+        <button id="registerLabel">✅ 등록</button>
+    </section>
+
+    <section id="labelList" class="list-view">
+        <h2>🏷️ 등록된 라벨 인쇄 사양</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>자재번호</th>
+                    <th>제품명</th>
+                    <th>출하 국가</th>
+                    <th>라벨 템플릿</th>
+                    <th>관리</th>
+                </tr>
+            </thead>
+            <tbody id="labelTableBody">
+                <!-- 동적 데이터 삽입 -->
+            </tbody>
+        </table>
+    </section>
+</main>
+
+</body>
+</html>

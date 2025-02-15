@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MES Sidebar</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script defer src="../scripts/sidebar.js"></script>
+</head>
+<body>
+    <aside class="w-64 bg-blue-600 text-white min-h-screen p-4">
+        <h2 class="text-xl font-bold mb-4">MES Navigation</h2>
+        <nav>
+            <!-- Authentication -->
+            <button onclick="toggleMenu('authMenu')" class="w-full text-left p-2 hover:bg-blue-500">🔐 Authentication</button>
+            <div id="authMenu" class="hidden pl-4">
+                <a href="#" class="sidebar-link block p-2 hover:bg-blue-500" data-page="auth/user_registration.html">👤 사용자 등록</a>
+                <a href="#" class="sidebar-link block p-2 hover:bg-blue-500" data-page="auth/login.html">🔑 로그인</a>
+                <a href="#" class="sidebar-link block p-2 hover:bg-blue-500" data-page="auth/user_management.html">👥 사용자 관리</a>
+            </div>
+
+            <!-- Emails -->
+            <button onclick="toggleMenu('emailMenu')" class="w-full text-left p-2 hover:bg-blue-500">📧 이메일</button>
+            <div id="emailMenu" class="hidden pl-4">
+                <a href="#" class="sidebar-link block p-2 hover:bg-blue-500" data-page="emails/admin_notification_email.html">📢 관리자 알림</a>
+                <a href="#" class="sidebar-link block p-2 hover:bg-blue-500" data-page="emails/user_request_email.html">📩 사용자 요청 확인</a>
+                <a href="#" class="sidebar-link block p-2 hover:bg-blue-500" data-page="emails/approval_email.html">✅ 승인 이메일</a>
+                <a href="#" class="sidebar-link block p-2 hover:bg-blue-500" data-page="emails/rejection_email.html">❌ 반려 이메일</a>
+                <a href="#" class="sidebar-link block p-2 hover:bg-blue-500" data-page="emails/deletion_email.html">⚠️ 삭제 이메일</a>
+            </div>
+
+            <!-- Production -->
+            <button onclick="toggleMenu('productionMenu')" class="w-full text-left p-2 hover:bg-blue-500">🏭 생산관리</button>
+            <div id="productionMenu" class="hidden pl-4">
+                <a href="#" class="sidebar-link block p-2 hover:bg-blue-500" data-page="production/overview.html">📊 생산 개요</a>
+                <a href="#" class="sidebar-link block p-2 hover:bg-blue-500" data-page="production/tasks.html">🛠 작업 지시</a>
+            </div>
+
+            <!-- 생산기술 -->
+            <button onclick="toggleMenu('mfgMenu')" class="w-full text-left p-2 hover:bg-blue-500">⚙️ 생산기술</button>
+            <div id="mfgMenu" class="hidden pl-4">
+                <a href="#" class="sidebar-link block p-2 hover:bg-blue-500" data-page="mfg/index.html">📊 대시보드</a>
+                <a href="#" class="sidebar-link block p-2 hover:bg-blue-500" data-page="mfg/process_registration.html">🏭 공정 등록</a>
+                <a href="#" class="sidebar-link block p-2 hover:bg-blue-500" data-page="mfg/model_order.html">📋 모델별 공정 순서</a>
+                <a href="#" class="sidebar-link block p-2 hover:bg-blue-500" data-page="bom/bom_management.html">📦 BOM 관리</a>
+                <a href="#" class="sidebar-link block p-2 hover:bg-blue-500" data-page="packing/packaging_management.html">📦 포장 관리</a>
+                <a href="#" class="sidebar-link block p-2 hover:bg-blue-500" data-page="mfg/ecn_approval.html">📝 ECN 승인</a>
+                <a href="#" class="sidebar-link block p-2 hover:bg-blue-500" data-page="mfg/manufacturing_environment.html">🏭 제조 환경 관리</a>
+                <a href="#" class="sidebar-link block p-2 hover:bg-blue-500" data-page="mfg/facility_registration.html">🔧 설비 등록</a>
+                <a href="#" class="sidebar-link block p-2 hover:bg-blue-500" data-page="mfg/facility_maintenance.html">🛠 설비 유지보수</a>
+                <a href="#" class="sidebar-link block p-2 hover:bg-blue-500" data-page="mfg/process_improvement.html">📊 공정 개선</a>
+            </div>
+            
+        </nav>
+    </aside>
+</body>
+</html>

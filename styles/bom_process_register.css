@@ -1,0 +1,234 @@
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f4f4f4;
+  margin: 0;
+  padding: 0;
+}
+
+/* 타이틀바 */
+.dashboard-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #007bff;
+  color: white;
+  padding: 15px;
+}
+
+h1 {
+  margin: 0;
+  font-size: 24px;
+}
+
+
+/* 전체 테이블 스타일 */
+.bom-process-table {
+  width: 95%;
+  margin: 20px auto;
+  padding: 20px;
+  background: white;
+  border-radius: 10px;
+  box-shadow: 0px 3px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* 테이블 기본 스타일 */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 16px;
+}
+
+/* 테이블 헤더 */
+thead th {
+  background-color: #007bff;
+  color: white;
+  padding: 10px;
+  text-align: center;
+}
+
+/* 테이블 본문 */
+tbody td {
+  padding: 10px;
+  text-align: center;
+  border-bottom: 1px solid #ddd;
+}
+
+/* 마우스 오버 시 행 강조 */
+tbody tr:hover {
+  background-color: #f1f8ff;
+}
+
+/* 마우스 오버 시 열 강조 */
+table td:hover {
+  background-color: #e2edff;
+}
+
+/* 체크박스 크기 확대 */
+input[type="checkbox"] {
+  width: 18px;
+  height: 18px;
+  cursor: pointer;
+}
+
+/* 🚀 부모-자식 관계 구분 (레벨별 색상 및 간격 설정) */
+.level-0 {
+  font-weight: bold;
+  background-color: #f8f9fa; /* 제품 */
+  color: black;
+}
+
+.level-1 {
+  padding-left: 20px;
+  background-color: #eef5ff; /* 부품 */
+  color: black;
+}
+
+.level-2 {
+  padding-left: 40px;
+  background-color: #e6f0ff; /* 원자재 */
+  color: #007bff;
+  font-size: 14px;
+}
+
+/* 공정-부품 등록 버튼 */
+#registerProcess {
+  width: 100%;
+  padding: 12px;
+  margin-top: 10px;
+  font-size: 18px;
+  font-weight: bold;
+  background-color: #28a745;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+#registerProcess:hover {
+  background-color: #218838;
+}
+
+/* 🔹 체크박스 크기 조정 (표 크기 유지) */
+.process-checkbox {
+    width: 18px; /* 체크박스 너비 */
+    height: 18px; /* 체크박스 높이 */
+    transform: scale(1.5); /* 체크박스 크기 확대 */
+    cursor: pointer;
+    margin: 0; /* 불필요한 여백 제거 */
+    vertical-align: middle; /* 체크박스를 중앙 정렬 */
+}
+
+/* 테이블 스타일 */
+.bom-process-table {
+  margin: 20px;
+  background: white;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+th, td {
+  padding: 10px;
+  text-align: center;
+  border-bottom: 1px solid #ddd;
+}
+
+th {
+  background: #007bff;
+  color: white;
+}
+
+.process-checkbox {
+  transform: scale(1.5);
+}
+
+/* 🔹 테이블 헤더 및 셀 스타일 */
+.bom-process-table th, .bom-process-table td {
+    padding: 6px 8px; /* 여백 최소화 */
+    text-align: center;
+    border: 1px solid #ddd;
+    vertical-align: middle; /* 텍스트와 체크박스 정렬 */
+}
+
+/* 🔹 테이블 헤더 스타일 */
+.bom-process-table th {
+    background-color: #007bff;
+    color: white;
+    font-weight: bold;
+    padding: 10px 8px; /* 상하 여백 추가 */
+}
+
+/* 🔹 행 호버 효과 */
+.bom-process-table tr:hover {
+    background-color: #f5f5f5;
+}
+
+/* 🔹 체크박스가 있는 열의 크기 제한 */
+.bom-process-table td input[type="checkbox"] {
+    display: inline-block;
+    width: auto;
+    margin: 0 auto;
+}
+
+/* 드롭다운 컨테이너 */
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+/* 드롭다운 버튼 스타일 */
+.dropbtn {
+  background-color: transparent;
+  color: white;
+  padding: 10px 15px;
+  font-size: 16px;
+  border: none;
+  cursor: pointer;
+}
+
+.dropbtn:hover {
+  text-decoration: underline;
+}
+
+/* 드롭다운 내용 */
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: white;
+  min-width: 200px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+  border-radius: 5px;
+  z-index: 1000;
+  padding: 10px 0;
+}
+
+/* 드롭다운 링크 스타일 */
+.dropdown-content a {
+  color: #333;
+  padding: 12px 16px;
+  text-decoration: none; /* 기본 밑줄 제거 */
+  display: block;
+  font-size: 14px;
+}
+
+/* 마우스를 올렸을 때 효과 */
+.dropdown-content a:hover {
+  background-color: #f1f1f1;
+  font-weight: bold;
+}
+
+/* 드롭다운 활성화 */
+.show {
+  display: block;
+}
+
+/* 🔹 부품명 컬럼 왼쪽 정렬 */
+.bom-name {
+  text-align: left !important;
+  padding-left: 10px;
+}

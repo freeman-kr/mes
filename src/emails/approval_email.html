@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>사용자 승인 완료</title>
+    <style>
+        body { font-family: Arial, sans-serif; padding: 20px; }
+        .email-container { max-width: 600px; margin: auto; border: 1px solid #ddd; padding: 20px; }
+        .header { background: #4CAF50; color: white; text-align: center; padding: 10px 0; }
+        .content { margin-top: 20px; }
+        .footer { margin-top: 30px; font-size: 12px; color: #555; text-align: center; }
+    </style>
+</head>
+<body>
+    <div class="email-container">
+        <div class="header">
+            <h2>✅ 사용자 승인 완료</h2>
+        </div>
+        <div class="content">
+            <p>안녕하세요, <strong>{사용자 이름}</strong>님.</p>
+            <p>귀하의 계정이 승인되었습니다. 이제 시스템에 로그인하여 기능을 이용하실 수 있습니다.</p>
+            <p><a href="http://127.0.0.1:8080/src/auth/login.html">🔑 로그인 바로가기</a></p>
+        </div>
+        <div class="footer">
+            <p>본 메일은 자동 발송된 메일입니다. 문의사항은 관리자에게 연락하세요.</p>
+        </div>
+    </div>
+</body>
+</html>

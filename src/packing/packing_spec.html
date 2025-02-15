@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>포장 사양 등록</title>
+    <link rel="stylesheet" href="packing_spec.css">
+</head>
+<body>
+
+    <!-- 📦 타이틀 바 -->
+    <div class="title-bar">포장 사양 등록</div>
+
+    <div class="container">
+        <!-- 좌측 패널 (질문 카드) -->
+        <div class="left-panel">
+            <div id="questionCard" class="card">
+                <label id="questionLabel">📍 등록할 제품을 검색하세요</label>
+                <input type="text" id="searchInput" placeholder="자재번호 또는 자재명">
+                <button onclick="handleSearch()">검색</button>
+            </div>
+
+            <!-- 검색 결과 카드 -->
+            <div id="answerCard" class="card">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>제품 번호</th>
+                            <th>제품명</th>
+                        </tr>
+                    </thead>
+                    <tbody id="searchResults"></tbody>
+                </table>
+            </div>
+        </div>
+
+        <!-- 우측 패널 (선택 카드) -->
+        <div class="right-panel">
+            <div class="result-display">
+                <h3>📄 포장 사양 입력 데이터</h3>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>제품</th>
+                            <th>카톤박스</th>
+                            <th>적입수</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td id="selectedProduct">-</td>
+                            <td id="selectedCartonBox">-</td>
+                            <td id="selectedQuantity">-</td>
+                        </tr>
+                    </tbody>
+                </table>
+                <button id="nextBtn" style="display: none;" onclick="goToNextStep()">다음</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="packing_spec.js"></script>
+</body>
+</html>

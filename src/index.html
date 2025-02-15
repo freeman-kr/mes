@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MES 시스템</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script defer src="../scripts/sidebar.js"></script>
+</head>
+<body class="flex">
+    <!-- 사이드바 포함 -->
+    <iframe src="sidebar.html" class="w-64 h-screen border-r border-gray-300"></iframe>
+
+    <!-- 메인 컨텐츠 영역 -->
+    <main class="flex-1 p-4">
+        <iframe id="contentFrame" src="welcome.html" class="w-full h-full border-none"></iframe>
+    </main>
+</body>
+</html>

@@ -1,0 +1,475 @@
+/* 🔹 전체 페이지 스타일 */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f4f4f4;
+}
+
+/* 대시보드 컨테이너 */
+.dashboard-container {
+  width: 80%;
+  margin: auto;
+  padding: 20px;
+}
+
+/* 상단 타이틀바 */
+.dashboard-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #007bff;
+  color: white;
+  padding: 15px;
+  border-radius: 5px;
+}
+
+.dashboard-header h1 {
+  margin: 0;
+  font-size: 24px;
+}
+
+/* 타일 형식 UI */
+.tile-view {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+  justify-content: center;
+  padding: 20px;
+}
+
+.dashboard-card {
+  background: white;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  width: 250px;
+  cursor: pointer;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.dashboard-card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+}
+
+/* 리스트 보기 */
+.bom-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.bom-table th, .bom-table td {
+  border: 1px solid #ccc;
+  padding: 10px;
+  text-align: left;
+}
+
+.bom-table th {
+  background-color: #007bff;
+  color: white;
+}
+
+.bom-table button {
+  background-color: #007bff;
+  color: white;
+  border: none;
+  padding: 8px 12px;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+.bom-table button:hover {
+  background-color: #0056b3;
+}
+
+/* 리스트 숨김 */
+.hidden {
+  display: none;
+}
+
+/* 드롭다운 버튼 */
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropbtn {
+  background-color: #007bff;
+  color: white;
+  padding: 10px;
+  font-size: 14px;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+.dropbtn:hover {
+  background-color: #0056b3;
+}
+
+/* 드롭다운 메뉴 */
+.dropdown-content {
+  display: none; /* 기본적으로 숨김 */
+  position: absolute;
+  background-color: white;
+  min-width: 180px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+  border-radius: 5px;
+  z-index: 10;
+  overflow: hidden;
+}
+
+/* 드롭다운 메뉴 */
+.dropdown-content {
+  display: none; /* 기본적으로 숨김 */
+  position: absolute;
+  background-color: white;
+  min-width: 180px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+  border-radius: 5px;
+  z-index: 10;
+  overflow: hidden;
+}
+
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  display: block;
+  text-decoration: none;
+}
+
+.dropdown-content a:hover {
+  background-color: #f1f1f1;
+}
+
+/* 활성화 시 드롭다운 표시 */
+.show {
+  display: block;
+}
+
+/* 🔹 BOM 등록 페이지 헤더 */
+.dashboard-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #007bff;
+  color: white;
+  padding: 15px;
+  border-radius: 5px;
+}
+
+.dashboard-header h1 {
+  margin: 0;
+  font-size: 24px;
+}
+
+/* 🔹 BOM 카드 (엑셀 다운로드 & 업로드 통합) */
+.bom-card {
+  background: white;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  width: 50%;
+  margin: 20px auto;
+  text-align: left;
+}
+
+/* 🔹 입력 폼 스타일 */
+.bom-form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.bom-form label {
+  font-weight: bold;
+}
+
+.bom-form input {
+  padding: 10px;
+  width: 100%;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+/* 🔹 파일 업로드 스타일 */
+input[type="file"] {
+  margin: 0 10px;
+}
+
+/* 🔹 버튼 스타일 */
+button {
+  background-color: #007bff;
+  color: white;
+  border: none;
+  padding: 10px;
+  cursor: pointer;
+  border-radius: 5px;
+  font-size: 14px;
+}
+
+button:hover {
+  background-color: #0056b3;
+}
+
+/* 🔹 테이블 스타일 */
+.bom-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+}
+
+.bom-table th, .bom-table td {
+  border: 1px solid #ccc;
+  padding: 10px;
+  text-align: left;
+}
+
+.bom-table th {
+  background-color: #007bff;
+  color: white;
+}
+
+/* 🔹 관리 버튼 스타일 */
+.bom-table button {
+  background-color: #007bff;
+  color: white;
+  border: none;
+  padding: 8px 12px;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+.bom-table button:hover {
+  background-color: #0056b3;
+}
+
+/* 🔹 엑셀 관리 요소 (다운로드 & 업로드) */
+.excel-action {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: #f9f9f9;
+  padding: 10px;
+  border-radius: 8px;
+  margin-top: 10px;
+}
+
+/* 🔹 전체 컨테이너 */
+.bom-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 20px;
+  padding: 20px;
+}
+
+/* 🔹 입력 폼 컨테이너 */
+.bom-form-container {
+  flex: 1;
+  max-width: 400px;
+  background: white;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+/* 🔹 BOM 테이블 컨테이너 */
+.bom-table-container {
+  flex: 2;
+  background: white;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  width: 100%;
+}
+
+/* 🔹 테이블 스타일 */
+.bom-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.bom-table th, .bom-table td {
+  border: 1px solid #ddd;
+  padding: 10px;
+  text-align: left;
+}
+
+.bom-table th {
+  background: #007bff;
+  color: white;
+}
+
+/* 🔹 양식 다운로드 및 업로드 버튼 */
+.bom-actions {
+  margin-top: 20px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.bom-actions button {
+  background: #007bff;
+  color: white;
+  border: none;
+  padding: 10px;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+.bom-actions button:hover {
+  background: #0056b3;
+}
+
+/* 🔹 반응형 (작은 화면에서는 세로 정렬) */
+@media (max-width: 900px) {
+  .bom-container {
+      flex-direction: column;
+  }
+}
+
+/* 🔹 전체 입력 폼 스타일 조정 */
+.form-group {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 10px;
+}
+
+/* 🔹 입력 박스 스타일 */
+input {
+  padding: 8px;
+  font-size: 14px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+/* 🔹 버튼 스타일 */
+button {
+  width: 100%;
+  padding: 10px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  cursor: pointer;
+  font-size: 16px;
+  border-radius: 4px;
+}
+
+button:hover {
+  background-color: #0056b3;
+}
+
+/* 제품 등록 입력 필드 스타일 개선 */
+#productRegistration label {
+  font-weight: bold;
+  margin-top: 10px;
+  display: block;
+}
+
+#productRegistration input {
+  width: 100%;
+  padding: 8px;
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+#registerProduct {
+  width: 100%;
+  padding: 10px;
+  background-color: #007bff;
+  color: white;
+  font-size: 16px;
+  font-weight: bold;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+#registerProduct:hover {
+  background-color: #0056b3;
+}
+
+/* 하위 항목 등록 입력 필드 스타일 개선 */
+#subItemRegistration label {
+  font-weight: bold;
+  margin-top: 10px;
+  display: block;
+}
+
+#subItemRegistration input,
+#subItemRegistration select,
+#subItemRegistration textarea {
+  width: 100%;
+  padding: 8px;
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+#addBOM {
+  width: 100%;
+  padding: 10px;
+  background-color: #007bff;
+  color: white;
+  font-size: 16px;
+  font-weight: bold;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+#addBOM:hover {
+  background-color: #0056b3;
+}
+
+/* BOM 리스트 테이블 스타일 */
+#bomListTable {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+#bomListTable th, #bomListTable td {
+  border: 1px solid #ccc;
+  padding: 10px;
+  text-align: left;
+}
+
+#bomListTable th {
+  background-color: #007bff;
+  color: white;
+}
+
+#bomListTable td a {
+  color: #007bff;
+  text-decoration: none;
+}
+
+#bomListTable td a:hover {
+  text-decoration: underline;
+}
+
+/* 검색 필터 스타일 */
+.search-section {
+  margin: 20px 0;
+}
+
+.search-section input, .search-section select {
+  padding: 10px;
+  margin-right: 10px;
+}
+
+.search-section button {
+  background-color: #007bff;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+}
+
+.search-section button:hover {
+  background-color: #0056b3;
+}

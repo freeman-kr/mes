@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>모델 공정 순서 수정</title>
+    <link rel="stylesheet" href="../../styles/mfg.css">
+    <link rel="stylesheet" href="../../styles/model_order.css">
+    <script defer src="../../scripts/model_order.js"></script>
+</head>
+<body>
+
+<header class="dashboard-header">
+    <h1>📌 생산기술 > 모델별 공정 순서</h1>
+    <div class="dropdown">
+        <button class="dropbtn">🔗 바로가기 ▼</button>
+        <div class="dropdown-content">
+            <a href="index.html">🏠 대시보드</a>
+            <a href="process_registration.html">🛠 공정 등록</a>
+            <a href="model_order.html">📋 모델별 공정 순서</a>
+        </div>
+    </div>
+</header>
+
+<!-- 모델 정보 수정 -->
+<section class="model-info">
+    <h2>🛠 모델 정보 수정</h2>
+    <label>모델 코드:</label> <input type="text" value="1234-5678-00" readonly>
+    <label>모델명:</label> <input type="text" value="MQ5">
+    <label>플랫폼:</label> <input type="text" value="MS400A">
+    <label>향지:</label> <input type="text" value="MX">
+</section>
+
+<!-- 공정 갯수 선택 -->
+<section class="process-selection">
+    <h2>🔧 공정 갯수 선택</h2>
+    <label>준비공정:</label>
+    <select id="preparationProcess" multiple>
+        <option>준비1</option>
+        <option>준비2</option>
+        <option>준비3</option>
+    </select>
+
+    <label>조립공정:</label>
+    <select id="assemblyProcess" multiple>
+        <option>조립1</option>
+        <option>조립2</option>
+        <option>조립3</option>
+        <option>조립4</option>
+        <option>조립5</option>
+    </select>
+
+    <label>검사공정:</label>
+    <select id="inspectionProcess" multiple>
+        <option>자동검사1</option>
+        <option>자동검사2</option>
+        <option>자동검사3</option>
+        <option>수동검사1</option>
+        <option>수동검사2</option>
+    </select>
+
+    <label>포장공정:</label>
+    <select id="packagingProcess" multiple>
+        <option>포장준비1</option>
+        <option>포장준비2</option>
+        <option>포장</option>
+    </select>
+</section>
+
+<!-- 공정 순서 -->
+<section class="process-sequence">
+    <h2>🔧 공정 순서</h2>
+    <p>선택한 공정들을 순서대로 지정하세요.</p>
+    <textarea id="processSequence"></textarea>
+    <button id="saveProcess" class="save-btn">💾 저장</button>
+</section>
+
+</body>
+</html>

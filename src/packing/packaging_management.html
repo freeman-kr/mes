@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>포장 관리 대시보드</title>
+    <link rel="stylesheet" href="../../styles/mfg.css">
+    <link rel="stylesheet" href="../../styles/packing_management.css">
+    <script defer src="../../scripts/packing_management.js"></script>
+</head>
+<body>
+
+<header class="dashboard-header">
+    <h1>📦 포장 관리 대시보드</h1>
+    <div class="view-toggle">
+        <button id="tileView" class="active">📌 타일</button>
+        <button id="listView">📋 리스트</button>
+    </div>
+</header>
+
+<main class="dashboard-container">
+    <!-- 🔹 타일 보기 -->
+    <section id="tileContainer" class="tile-view">
+        <div class="dashboard-card" onclick="navigateTo('packing_spec.html')">
+            <h2>📋 포장 사양 관리</h2>
+            <p>모델별 포장 사양을 설정합니다.</p>
+        </div>
+        <div class="dashboard-card" onclick="navigateTo('carton_management.html')">
+            <h2>📦 카톤박스 설정</h2>
+            <p>카톤박스 제품 인입 수량을 설정합니다.</p>
+        </div>
+        <div class="dashboard-card" onclick="navigateTo('packing_accessories.html')">
+            <h2>🛠 포장 액세서리 관리</h2>
+            <p>포장 시 필요한 액세서리를 등록합니다.</p>
+        </div>
+        <div class="dashboard-card" onclick="navigateTo('pallet_management.html')">
+            <h2>🏗️ 파렛트 적재 관리</h2>
+            <p>파렛트 적재 단수를 설정합니다.</p>
+        </div>
+        <div class="dashboard-card" onclick="navigateTo('label_management.html')">
+            <h2>🏷️ 라벨 관리</h2>
+            <p>제품 및 국가별 라벨을 관리하고 인쇄합니다.</p>
+        </div>
+    </section>
+
+    <!-- 🔹 리스트 보기 -->
+    <section id="listContainer" class="hidden">
+        <h2>📦 포장 관리 기능 목록</h2>
+        <table class="process-table">
+            <thead>
+                <tr>
+                    <th>기능명</th>
+                    <th>설명</th>
+                    <th>바로가기</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>📋 포장 사양 관리</td>
+                    <td>모델별 포장 사양을 설정합니다.</td>
+                    <td><button onclick="navigateTo('packing_spec.html')">이동</button></td>
+                </tr>
+                <tr>
+                    <td>📦 카톤박스 설정</td>
+                    <td>카톤박스 제품 인입 수량을 설정합니다.</td>
+                    <td><button onclick="navigateTo('carton_management.html')">이동</button></td>
+                </tr>
+                <tr>
+                    <td>🛠 포장 액세서리 관리</td>
+                    <td>포장 시 필요한 액세서리를 등록합니다.</td>
+                    <td><button onclick="navigateTo('packing_accessories.html')">이동</button></td>
+                </tr>
+                <tr>
+                    <td>🏗️ 파렛트 적재 관리</td>
+                    <td>파렛트 적재 단수를 설정합니다.</td>
+                    <td><button onclick="navigateTo('pallet_management.html')">이동</button></td>
+                </tr>
+                <tr>
+                    <td>🏷️ 라벨 관리</td>
+                    <td>제품 및 국가별 라벨을 관리하고 인쇄합니다.</td>
+                    <td><button onclick="navigateTo('label_management.html')">이동</button></td>
+                </tr>
+            </tbody>
+        </table>
+    </section>
+</main>
+
+</body>
+</html>

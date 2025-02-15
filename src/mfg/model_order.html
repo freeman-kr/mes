@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>모델별 공정 순서</title>
+    <link rel="stylesheet" href="../../styles/mfg.css">
+    <link rel="stylesheet" href="../../styles/model_order.css">
+    <script defer src="../../scripts/model_order.js"></script>
+</head>
+<body>
+
+  <header class="dashboard-header">
+    <h1>📌 생산기술 > 모델별 공정 순서</h1>
+    <div class="dropdown">
+        <button class="dropbtn">🔗 바로가기 ▼</button>
+        <div class="dropdown-content hidden">
+            <a href="index.html">🏠 대시보드</a>
+            <a href="process_registration.html">🛠 공정 등록</a>
+            <a href="model_order.html">📋 모델별 공정 순서</a>
+            <a href="bom_management.html">📦 BOM 관리</a>
+            <a href="packaging_management.html">📦 포장 관리</a>
+            <a href="ecn_approval.html">📄 ECN 승인</a>
+            <a href="manufacturing_environment.html">🏭 제조 환경 관리</a>
+            <a href="facility_registration.html">🛠 설비 등록</a>
+            <a href="facility_maintenance.html">🔧 설비 유지보수</a>
+            <a href="process_improvement.html">📈 공정 개선 관리</a>
+        </div>
+    </div>
+  </header>
+
+  <!-- 🔍 모델 검색 -->
+  <section class="model-search">
+      <label for="modelCode">🔍 모델 검색</label>
+      <input type="text" id="modelCode" placeholder="모델 코드 입력">
+      <button id="searchModel">🔎 검색</button>
+      <button id="editModel">✏️ 수정</button>
+      <button id="newModel">🆕 신규 등록</button>
+  </section>
+
+  <!-- 📋 모델 검색 결과 -->
+  <section id="searchResults">
+      <h2>📋 모델 검색 결과</h2>
+      <table>
+          <thead>
+              <tr>
+                  <th>모델 코드</th>
+                  <th>모델명</th>
+                  <th>플랫폼</th>
+                  <th>공정 순서</th>
+              </tr>
+          </thead>
+          <tbody id="modelTable">
+              <!-- JavaScript에서 데이터 추가 -->
+          </tbody>
+      </table>
+  </section>
+
+</body>
+</html>

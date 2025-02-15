@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BOM 수정</title>
+    <link rel="stylesheet" href="../../styles/bom_edit.css">
+    <script defer src="../../scripts/bom_edit.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.17.3/xlsx.full.min.js"></script>
+</head>
+<body>
+
+    <!-- 🔹 상단 타이틀 -->
+    <header class="dashboard-header">
+        <h1>📝 BOM 수정</h1>
+        <div class="dropdown">
+            <button class="dropbtn" onclick="toggleDropdown()">🔗 바로가기 ▼</button>
+            <div class="dropdown-content" id="quickLinks">
+                <a href="bom_list.html">📋 BOM 리스트</a>
+                <a href="bom_analysis.html">📊 BOM 분석</a>
+            </div>
+        </div>
+    </header>
+
+    <div class="bom-container">
+        <!-- 🔹 BOM 수정 카드 -->
+        <div class="bom-form-container">
+            <h2>📝 BOM 수정</h2>
+
+            <!-- 🔹 BOM 수정 폼 -->
+            <div id="bomEditForm">
+                <p class="step-indicator">🔺 수정할 BOM 정보를 입력하세요.</p>
+
+                <label for="productName">📦 제품명</label>
+                <input type="text" id="productName" required>
+
+                <label for="productNumber">📑 제품 번호</label>
+                <input type="text" id="productNumber" required disabled>
+
+                <label for="parentItem">📂 부모 항목</label>
+                <input type="text" id="parentItem" disabled>
+
+                <label for="itemType">📦 항목 유형</label>
+                <select id="itemType">
+                    <option value="부품">부품</option>
+                    <option value="원자재">원자재</option>
+                </select>
+
+                <label for="partNumber">🔢 자재번호</label>
+                <input type="text" id="partNumber" required disabled>
+
+                <label for="itemName">🔧 항목명</label>
+                <input type="text" id="itemName" required>
+
+                <label for="quantity">📊 수량</label>
+                <input type="number" id="quantity" required>
+
+                <label for="unit">⚖️ 단위</label>
+                <select id="unit">
+                    <option value="PCS">PCS</option>
+                    <option value="KG">KG</option>
+                    <option value="M">M</option>
+                </select>
+
+                <label for="manufacturer">🏭 제조사</label>
+                <input type="text" id="manufacturer">
+
+                <label for="remarks">📝 비고</label>
+                <textarea id="remarks"></textarea>
+
+                <button id="saveBOM">💾 BOM 수정 저장</button>
+            </div>
+        </div>
+
+        <!-- 🔹 등록된 BOM 리스트 -->
+        <div class="bom-table-container">
+            <h2>📌 등록된 BOM 리스트</h2>
+            <div id="bomTreeView"></div>
+
+            <!-- 🔹 양식 다운로드 및 파일 업로드 -->
+            <div class="bom-actions">
+                <button onclick="downloadTemplate()">📥 양식 다운로드</button>
+                <input type="file" id="excelFileInput" accept=".xlsx, .csv">
+                <button onclick="uploadExcel()">📤 업로드</button>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>
